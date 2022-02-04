@@ -1,0 +1,9 @@
+package cosas;
+
+public class B {
+	
+	public void f() {
+		System.out.println("f de clase B");
+	}
+
+}

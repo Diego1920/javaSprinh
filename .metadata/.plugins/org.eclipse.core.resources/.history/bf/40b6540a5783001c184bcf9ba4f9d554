@@ -1,0 +1,9 @@
+package pruebaSpring.entities;
+
+public class ViolinAdapter implements instrumentoMusical{
+
+	private Guitarra guitarra;
+	public GuitarraAdapter;
+	
+	
+}

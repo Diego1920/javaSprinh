@@ -1,0 +1,12 @@
+package pruebaSpring.entities;
+
+public class Musico {
+
+	private Trompeta trompeta;
+	public void tocar() {
+		
+		this.trompeta.calentar();
+		this.trompeta.sonar();
+	}
+	
+}

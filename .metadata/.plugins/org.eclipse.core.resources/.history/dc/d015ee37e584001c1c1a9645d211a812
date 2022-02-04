@@ -1,0 +1,17 @@
+package pruebaSpring.entities;
+
+public class ViolinAdapter implements instrumentoMusical{
+
+	private Violin violin;
+	
+	public void GuitarraAdapter() {
+		this.violin=new Violin();
+	}
+
+	public void tocar() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

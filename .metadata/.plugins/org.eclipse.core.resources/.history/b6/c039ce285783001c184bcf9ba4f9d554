@@ -1,0 +1,39 @@
+package pruebaSpring.entities;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class Musico {
+
+	/*
+	private Trompeta trompeta;
+	
+	public Musico(){
+		this.trompeta=new Trompeta();
+	}
+	
+	
+	public void tocar() {
+		this.trompeta.calentar();
+		this.trompeta.sonar();
+	}
+	*/
+	
+	
+	private instrumentoMusical instrumento;
+	
+	public Musico() throws FileNotFoundException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+	     Properties p = new Properties(); 
+	     p.load(new FileInputStream("conf.properties"));
+	     if (this.instrumento==null) {
+	    	 this.instrumento=(instrumentoMusical)Class.forName(p.getProperty("impl")).newInstance();}	}
+	
+	public void tocar(){
+		
+		this.instrumento.tocar();
+		
+	}
+	
+}

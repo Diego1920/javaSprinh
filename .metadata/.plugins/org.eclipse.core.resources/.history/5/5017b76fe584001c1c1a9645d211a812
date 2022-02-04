@@ -1,0 +1,7 @@
+package pruebaSpring.entities;
+
+public interface instrumentoMusical {
+
+	public void tocar();
+	
+}
