@@ -55,6 +55,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Eclipse\eclipseSTS\workspaceSTS\clase2022"/>
 			<item value="D:\Eclipse\eclipseSTS\workspaceSTS\papSP2022"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

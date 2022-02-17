@@ -1,9 +1,0 @@
-package pruebaSpring.entities;
-
-public class GuitarraAdapter implements instrumentoMusical{
-
-	private Guitarra guitarra;
-	public GuitarraAdapter;
-	
-	
-}

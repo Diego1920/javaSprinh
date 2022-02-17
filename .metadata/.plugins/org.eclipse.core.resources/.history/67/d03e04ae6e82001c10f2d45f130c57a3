@@ -1,9 +1,0 @@
-package pruebaSpring.entities;
-
-public class Musico {
-
-	public void tocar() {
-		
-	}
-	
-}

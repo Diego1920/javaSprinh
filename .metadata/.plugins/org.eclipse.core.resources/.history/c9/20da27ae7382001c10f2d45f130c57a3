@@ -1,8 +1,0 @@
-package cosas;
-
-public class C {
-
-	public void f() {
-		System.out.println("f de clase A");
-	}
-}
