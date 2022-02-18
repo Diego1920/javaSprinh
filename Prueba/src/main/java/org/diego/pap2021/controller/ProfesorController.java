@@ -6,6 +6,7 @@ import org.diego.pap2021.entities.Asignatura;
 import org.diego.pap2021.entities.Profesor;
 import org.diego.pap2021.exception.DangerException;
 import org.diego.pap2021.exception.PRG;
+import org.diego.pap2021.service.AsignaturaService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,36 +18,39 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/profesor")
 public class ProfesorController {
 	
-	@GetMapping("r")
-	public String r(
-			ModelMap m
-			) {
-		List<Profesor> asignaturas = profesorService.findAll();
-		m.put("asignaturas", asignaturas);
-		m.put("view","asignatura/r");
-		return "_t/frame";
-	}
 	
+ private AsignaturaService asignaturaService;
+
 	@GetMapping("c")
 	public String c(
+			//para pasar datos
 			ModelMap m
 			) {
-		m.put("view","asignatura/c");
+		m.put("asignaturas",asignaturaService.findAll());
+		m.put("view","profesor/c"); 
 		return "_t/frame";
 	}
 	
 	@PostMapping("c")
 	public String cPost(
-			@RequestParam("nombre") String nombre
-			) throws DangerException {
-		try {
-			asignaturaService.crearAsignatura(nombre);
+			//los datos que se le pasan desde c
 			
-		} 
-		catch (Exception e) {
-			PRG.error(e.getMessage(),"/asignatura/c");
-		}
-		return "redirect:/asignatura/r";
-	}
+			@RequestParam("dni")String dni,
+			@RequestParam("password")String password,
+			@RequestParam("nombre")String nombre,
+			@RequestParam("apellido")String apellido,
+			@RequestParam("idAsignatura[]",required=false)List<Long>idAsignatura,
 
+			) {
+		profesorService
+		return "redirect:/profesor/r";
+	}
+	
+	@GetMapping("r")
+	public String r(
+			ModelMap m
+			) {
+		m.put("view","profesor/r");
+		return "_t/frame";
+	}
 }
